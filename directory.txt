@@ -1,9 +1,9 @@
 /astro-widget-site
- ├── index.html      # Main page
+ ├── index.html      # Main Page
  ├── styles.css      # Styling
- ├── script.js       # Interactive Features (Music, Animations, UFO Cursor)
+ ├── script.js       # JavaScript (Music, Animations, UFO Cursor)
  ├── assets/
  │   ├── background.mp3  # Background music 🎵
  │   ├── logo.png        # AstroKarts logo
  │   ├── space-bg.jpg    # Futuristic background
- │   ├── ufo-cursor.png  # UFO cursor image 🛸
+ │   ├── ufo-cursor.png  # UFO cursor 🛸

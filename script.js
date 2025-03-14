@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("🚀 AstroKarts Widget Loaded!");
 
+    // 🎵 Background Music Control
     const music = document.getElementById("background-music");
     const musicBtn = document.getElementById("music-btn");
     let isPlaying = false;
 
-    // 🎵 Background Music Control
     musicBtn.addEventListener("click", () => {
         if (isPlaying) {
             music.pause();
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isPlaying = !isPlaying;
     });
 
-    // 🛸 Custom UFO Cursor
+    // 🛸 Fix UFO Cursor
     const ufoCursor = document.createElement("img");
     ufoCursor.src = "assets/ufo-cursor.png";
     ufoCursor.classList.add("ufo-cursor");
