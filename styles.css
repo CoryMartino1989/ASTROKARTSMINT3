@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: url('assets/space-bg.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    text-align: center;
+    overflow-x: hidden;
+    cursor: none; /* Hide default cursor */
+}
+
+header {
+    padding: 20px;
+    background: linear-gradient(90deg, #ff00ff, #0099ff);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.logo {
+    width: 150px;
+    animation: float 3s infinite alternate;
+}
+
+h1, p {
+    animation: fadeIn 2s ease-in-out;
+}
+
+#music-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #ff00ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#music-btn:hover {
+    background: #0099ff;
+    transform: scale(1.1);
+}
+
+.widget-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    padding: 10px;
+    border: 3px solid #ff00ff;
+    box-shadow: 0px 0px 15px #ff00ff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.glow {
+    box-shadow: 0px 0px 20px #ff00ff;
+    transition: 0.3s;
+}
+
+.glow:hover {
+    box-shadow: 0px 0px 35px #ff00ff;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #222;
+    color: #aaa;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* UFO Cursor */
+.ufo-cursor {
+   
