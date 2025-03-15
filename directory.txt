@@ -2,4 +2,9 @@
 │── index.html    # Main game file
 │── style.css     # Basic styles
 │── game.js       # Core game logic
-│── assets/       # Sprites (optional)
+│── assets/
+│   ├── ninja.png         # Running ninja sprite
+│   ├── obstacle.png      # Enemy sprite
+│   ├── powerup-speed.png # Speed boost power-up
+│   ├── powerup-shield.png# Invincibility power-up
+│   ├── powerup-jump.png  # Double jump power-up
