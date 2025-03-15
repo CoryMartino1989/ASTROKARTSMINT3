@@ -1,9 +1,5 @@
-/astro-widget-site
- ├── index.html      # Main Page
- ├── styles.css      # Styling
- ├── script.js       # JavaScript (Music, Animations, UFO Cursor)
- ├── assets/
- │   ├── background.mp3  # Background music 🎵
- │   ├── logo.png        # AstroKarts logo
- │   ├── space-bg.jpg    # Futuristic background
- │   ├── ufo-cursor.png  # UFO cursor 🛸
+/pixel-ninja-dash
+│── index.html    # Main game file
+│── style.css     # Basic styles
+│── game.js       # Core game logic
+│── assets/       # Sprites (optional)
