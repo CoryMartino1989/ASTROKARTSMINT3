@@ -6,7 +6,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = 800;
 canvas.height = 400;
 
-// Load assets
+// Load assets & ensure they are loaded
 const ninjaImg = new Image();
 ninjaImg.src = "assets/ninja.png";
 
@@ -21,6 +21,19 @@ shieldPowerupImg.src = "assets/powerup-shield.png";
 
 const jumpPowerupImg = new Image();
 jumpPowerupImg.src = "assets/powerup-jump.png";
+
+const images = [ninjaImg, obstacleImg, speedPowerupImg, shieldPowerupImg, jumpPowerupImg];
+let loadedImages = 0;
+
+// Ensure all images are loaded before starting the game
+images.forEach(img => {
+    img.onload = () => {
+        loadedImages++;
+        if (loadedImages === images.length) {
+            startGame();
+        }
+    };
+});
 
 // Game variables
 let ninja = {
@@ -50,8 +63,8 @@ function jump() {
         ninja.velocityY = ninja.jumpPower;
         ninja.grounded = false;
     } else if (ninja.canDoubleJump) {
-        ninja.velocityY = ninja.jumpPower * 0.9; // Slightly lower second jump
-        ninja.canDoubleJump = false; // Only one double jump per air time
+        ninja.velocityY = ninja.jumpPower * 0.9;
+        ninja.canDoubleJump = false;
     }
 }
 
@@ -161,15 +174,17 @@ function updateGame() {
             ninja.y + ninja.height > obstacles[i].y
         ) {
             isGameOver = true;
-            alert("Game Over! Score: " + score);
-            document.location.reload();
+            setTimeout(() => {
+                alert("Game Over! Score: " + score);
+                document.location.reload();
+            }, 100);
         }
 
         // Remove off-screen obstacles
         if (obstacles[i].x + obstacles[i].width < 0) {
             obstacles.splice(i, 1);
             score++;
-            gameSpeed += 0.01; // Slowly increase difficulty
+            gameSpeed += 0.01;
         }
     }
 
@@ -197,5 +212,7 @@ function updateGame() {
     requestAnimationFrame(updateGame);
 }
 
-// Start the game
-updateGame();
+// Start game only after all images load
+function startGame() {
+    updateGame();
+}
